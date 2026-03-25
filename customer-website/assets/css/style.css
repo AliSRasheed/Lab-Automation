@@ -1,0 +1,522 @@
+/* ===============================
+   Carousel (Homepage Banner)
+   =============================== */
+.carousel-item img {
+  object-fit: cover; /* Ensures carousel images fill area without stretching */
+}
+.carousel-caption {
+  background: rgba(0,0,0,0.5); /* Semi-transparent background for text */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* ===============================
+   Gallery Page Images
+   =============================== */
+.gallery-img {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.gallery-img:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  /* box-shadow: 0 10px 25px rgba(0,0,0,0.3); Drop shadow */
+}
+.modal-content {
+  border: none; /* Clean look for modal */
+}
+
+/* ===============================
+   Product Card (Hover Effect)
+   =============================== */
+.product-card {
+  transition: all 0.3s ease;
+}
+.product-card:hover {
+  transform: translateY(-8px) scale(1.02); /* Lift & scale */
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25); /* Shadow on hover */
+}
+
+/* ===============================
+   Products Page - Hero Section
+   =============================== */
+.hero-products {
+  background: url('assets/images/hero-products.jpg') center/cover no-repeat;
+  height: 40vh;
+  position: relative;
+}
+.hero-products::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.6); /* Dark overlay */
+}
+.hero-products .container { 
+  position: relative; 
+  z-index: 2; /* Ensure text sits above overlay */
+}
+
+/* Product Cards */
+.product-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* Product Card Images (Uniform Size for Grid) */
+.card-img-top {
+  width: 100%;
+  height: 250px;       /* fixed height */
+  object-fit: cover;   /* crop instead of stretch */
+  border-radius: 5px;
+}
+
+/* ===============================
+   Product Details Page
+   =============================== */
+.hero-product {
+  background: url('assets/images/hero-product.jpg') center/cover no-repeat;
+  height: 50vh;
+  position: relative;
+}
+.hero-product::before {
+  content: "";
+  position: absolute; top:0; left:0; right:0; bottom:0;
+  background: rgba(0,0,0,0.6);
+}
+.hero-product .container { position: relative; z-index: 2; }
+
+/* Thumbnails in Product Details */
+.thumb-img {
+  width: 100px;
+  height: 80px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.thumb-img:hover {
+  transform: scale(1.1);
+  border: 2px solid orange;
+}
+
+/* ===============================
+   About Page
+   =============================== */
+.hero-about {
+  background: url('assets/images/hero-about.jpg') center/cover no-repeat;
+  height: 40vh;
+  position: relative;
+}
+.hero-about::before {
+  content: "";
+  position: absolute; top:0; left:0; right:0; bottom:0;
+  background: rgba(0,0,0,0.6);
+}
+.hero-about .container { position: relative; z-index: 2; }
+
+/* Timeline (About Page) */
+.timeline {
+  position: relative;
+  padding-left: 20px;
+  border-left: 3px solid orange;
+}
+.timeline-item {
+  margin-bottom: 30px;
+  padding-left: 15px;
+}
+.timeline-item h5 {
+  font-weight: bold;
+  color: orange;
+}
+.timeline-item p {
+  margin: 0;
+}
+
+/* ===============================
+   Services Page
+   =============================== */
+.hero-services {
+  background: url('assets/images/hero-services.jpg') center/cover no-repeat;
+  height: 40vh;
+  position: relative;
+}
+.hero-services::before {
+  content: "";
+  position: absolute; top:0; left:0; right:0; bottom:0;
+  background: rgba(0,0,0,0.6);
+}
+.hero-services .container { position: relative; z-index: 2; }
+
+.service-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+}
+
+/* ===============================
+   Contact Page
+   =============================== */
+.hero-contact {
+
+  height: 40vh;
+  position: relative;
+}
+.hero-contact::before {
+  content: "";
+  position: absolute; top:0; left:0; right:0; bottom:0;
+
+}
+.hero-contact .container { position: relative; z-index: 2; }
+
+/* ===============================
+   Homepage Video Hero Section
+   =============================== */
+.hero-video {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* full screen height */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.bg-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: 1;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0; 
+  background: linear-gradient(to bottom, rgba(94, 144, 236, 0.5), rgba(242, 242, 242, 0.484));
+  z-index: 2;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  color: #fff;
+  max-width: 800px;
+  padding: 1rem;
+}
+
+.hero-content h1 {
+  font-size: clamp(2rem, 5vw, 4rem);
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  margin-bottom: 1.5rem;
+}
+
+.cta-button {
+  display: inline-block;
+  background: #011555;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+.cta-button:hover {
+  background: #1c85be;
+}
+
+.pulse-animation {
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* ===============================
+   Navbar / Logo
+   =============================== */
+img.me-2 {
+    width: 119px;
+    height: 98px;
+    margin-left: 30px;
+}
+.nav-link{
+  color: #1c85be;
+}
+
+
+
+
+
+
+
+/* ===============================
+   Product Details Page - Images
+   =============================== */
+
+/* Main Product Image (on product-details.php) */
+.main-image img {
+  width: 100%;
+  height: 400px;       /* consistent main image height */
+  object-fit: cover;   /* crop instead of stretch */
+  border-radius: 8px;  /* rounded corners */
+}
+
+/* Thumbnails (below main image) */
+.thumb-img {
+  width: 100px;        /* consistent size */
+  height: 100px;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: transform 0.2s ease, border 0.2s ease;
+}
+.thumb-img:hover {
+  transform: scale(1.1);
+  border: 2px solid orange; /* highlight active hover */
+}
+
+
+/* Force all product cards to be equal height */
+#productsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem; /* spacing between cards */
+}
+
+#productsGrid .product-card-wrap {
+  flex: 1 1 calc(25% - 1.5rem); /* 4 cards per row */
+  display: flex;
+}
+
+#productsGrid .card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+#productsGrid .card-body {
+  flex-grow: 1; /* pushes footer to bottom */
+}
+
+/* Product Card Images - Uniform Sizing */
+.product-img {
+  width: 100%;
+  height: 250px;        /* consistent height */
+  object-fit: cover;    /* crop to fit */
+  border-radius: 5px;
+}
+
+/* gerl */
+
+/* footeer */
+
+
+/* Footer Links */
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #ddd;
+  transition: color 0.3s ease, padding-left 0.3s ease;
+  display: inline-block;
+}
+
+.footer-links a:hover {
+  color: #ffc107;
+  padding-left: 5px;
+}
+
+/* Social Icons */
+.social-icons a {
+  text-decoration: none;
+  color: #ddd;
+  font-size: 1.2rem;
+  margin-right: 10px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ffc107;
+  transform: translateY(-3px);
+}
+
+/* Newsletter */
+.newsletter-form .form-control {
+  border-radius: 8px 0 0 8px;
+}
+
+.newsletter-form .btn {
+  border-radius: 0 8px 8px 0;
+  font-weight: 600;
+}
+a {
+    color: rgb(255 193 7);
+    text-decoration: none;
+    list-style: none;
+}
+
+/* responsive */
+
+/* ===============================
+   Global Reset & Base
+================================*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: #f8f9fa;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: 0.3s ease;
+}
+
+a:hover {
+  color: #ffc107;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn-warning {
+  background: #ffc107;
+  color: #000;
+  border: none;
+}
+
+.btn-warning:hover {
+  background: #e0a800;
+  color: #fff;
+}
+
+/* Cards */
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+/* Footer */
+footer {
+  background: #111;
+  color: #ddd;
+}
+
+footer h5, footer h6 {
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  color: #ddd;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #ffc107;
+  padding-left: 5px;
+}
+
+.social-icons a {
+  font-size: 1.2rem;
+  margin-right: 10px;
+  color: #ddd;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: #ffc107;
+  transform: translateY(-3px);
+}
+
+/* Responsive Grid */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+ 
+}
+
+.col {
+  flex: 1;
+}
+
+/* ===============================
+   RESPONSIVE BREAKPOINTS
+================================*/
+
+/* Tablets */
+@media (max-width: 992px) {
+  .container {
+    width: 95%;
+  }
+
+  footer .row {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* Mobiles */
+@media (max-width: 576px) {
+  body {
+    font-size: 15px;
+  }
+
+  .btn {
+    padding: 8px 15px;
+  }
+
+  .card {
+    margin-bottom: 20px;
+  }
+
+  footer .col-md-2, footer .col-md-4 {
+    margin-bottom: 20px;
+  }
+}
