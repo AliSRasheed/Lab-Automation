@@ -17,12 +17,13 @@ $result = $conn->query("SELECT * FROM gallery ORDER BY UploadedAt DESC");
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
   <style>
     body { background: #0f172a; color: white; }
-    .content { margin-left: 240px; padding: 20px; }
+    .content { margin-left: 230px; padding: 20px; }
     .card { background: #1e293b; color: white; border: none; }
     .table { color: white; }
     .btn-orange { background: orange; color: black; border: none; }
     .btn-orange:hover { background: darkorange; }
     img { max-width: 100px; border-radius: 6px; }
+    
   </style>
 </head>
 <body>
